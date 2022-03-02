@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro&display=swap");
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: F5F2EA;
+  color: #FF0000;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+section {
+  border-bottom: 0.1rem solid #FF0000 !important;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0 2.5rem;
+  align-items: center;
+  border-bottom: 0.1rem solid #FF0000;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+.nav-logo {
+  margin-top: 1.2rem;
+}
+.nav-item {
+  padding: 2.7rem 4rem 2.8rem 0rem;
+}
+.nav-item:not(:last-of-type) {
+  padding-right: 4rem;
+}
+.nav-item:hover {
+  border-bottom: 0.2rem solid #FF0000;
+}
+
+#offer {
+  background-color: #F0D2B7;
+  padding: 15rem 0;
+  text-align: center;
+}
+
+.offer-btn {
+  border: 0.1rem solid #FF0000;
+  font-size: 1.5rem;
+  padding: 3rem 0;
+  display: block;
+  max-width: 200px;
+}
+.offer-btn:nth-child(1) {
+  margin-right: 3rem;
+}
+.offer-quote {
+  font-size: 1.9rem;
+}
+.offer-title {
+  font-size: 6.5rem;
+  margin: 2.5rem 0 2.9rem;
+}
+.offer-subtitle {
+  font-size: 2.1rem;
+  margin-bottom: 7.3rem;
+}
+
+.btn-group {
+  display: flex-inline;
+  justify-content: center;
+}
+
+#why {
+  background-color: #fff;
+}
+
+.yes, .no {
+  border-right: 0.1rem solid #FF0000;
+  padding-left: 3rem;
+}
+
+.why-title {
+  font-size: 3.4rem;
+  padding: 2.7rem 0 5.3rem;
+}
+.why-list__item {
+  font-size: 2.1rem;
+}/*# sourceMappingURL=style.css.map */

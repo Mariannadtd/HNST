@@ -1,0 +1,51 @@
+- var pageTitle = 'hnst'
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= pageTitle
+    style
+      include styles/normalize.css
+      include styles/bootstrap-grid.min.css
+      include styles/bootstrap-reboot.min.css
+      include styles/style.css
+  body
+    include modules/header
+
+    section#offer
+      .container
+        .row.align-items-center
+          .col.offer
+            span.offer-quote.upper beat the lockdown blues with
+            h1.offer-title The world's most sustainable denim collection.
+            h3.offer-subtitle Let's ditch fast fashion and change the world.
+            .btn-group
+              a.offer-btn.upper shop Women
+              a.offer-btn.upper shop Men
+          .col
+            img(src="../images/offer.png", alt="offer").offer-photo
+
+    section#why
+      .container
+        .row
+          .col-md-3.yes
+            h2.why-title.upper Yes
+            ul.why-list
+              li.why-list__item + 56% Recycled denim
+              li.why-list__item + saves 76% CO2
+              li.why-list__item + 100% recyclable
+              li.why-list__item + saves 6639 liter water
+              li.why-list__item + 100% Made in EU
+          .col-md-3.no
+            h2.why-title.upper No
+            ul.why-list
+              li.why-list__item - Toxic Chemicals
+              li.why-list__item - Plastic fibers or coating
+              li.why-list__item - Extra labels
+              li.why-list__item - Unethical labour
+              li.why-list__item - Compromises
+          .col-md-6
+            img(src="../images/secondsection.png", alt="offer").why-photo
+
+
+    include modules/footer
