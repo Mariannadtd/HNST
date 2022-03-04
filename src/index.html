@@ -1,4 +1,10 @@
-<html lang="ru"><head><meta charset="utf-8"/><title>hnst</title><style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>hnst</title>
+    <style>
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 /*# sourceMappingURL=normalize.min.css.map *//*!
  * Bootstrap Grid v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -26,6 +32,8 @@ body {
 
 ul, li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -37,14 +45,27 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 section {
   border-bottom: 0.1rem solid #FF0000 !important;
 }
 
+input[type=text]::-webkit-input-placeholder {
+  color: #FF0000;
+}
+
+input[type=text]::-moz-placeholder {
+  color: #FF0000;
+}
+
 .upper {
   text-transform: uppercase;
+}
+
+.margin {
+  padding-top: 3rem;
 }
 
 .container {
@@ -67,6 +88,7 @@ section {
 }
 .nav-logo {
   margin-top: 1.2rem;
+  width: 11rem;
 }
 .nav-item {
   padding: 2.7rem 4rem 2.8rem 0rem;
@@ -126,4 +148,241 @@ section {
 }
 .why-list__item {
   font-size: 2.1rem;
-}/*# sourceMappingURL=style.css.map */</style></head><body><header><div class="header upper"><div class="container"><div class="row align-self-center"><nav class="col-md-4"><ul class="nav"><li class="nav-item"><a class="nav-link" href="#">Women</a></li><li class="nav-item"><a class="nav-link" href="#">Men</a></li><li class="nav-item"><a class="nav-link" href="#">Collaborations</a></li><li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li></ul></nav><a class="col-md-4" href="#"><img class="nav-logo" src="../images/logo.png" alt="logo"/></a><nav class="col-md-4"><ul class="nav"><li class="nav-item"><a class="nav-link" href="#">HNST About</a></li><li class="nav-item"><a class="nav-link" href="#">Stories</a></li><li class="nav-item"><a class="nav-link" href="#">CART (0)</a></li></ul></nav></div></div></div></header><section id="offer"><div class="container"><div class="row align-items-center"><div class="col offer"><span class="offer-quote upper">beat the lockdown blues with</span><h1 class="offer-title">The world's most sustainable denim collection.</h1><h3 class="offer-subtitle">Let's ditch fast fashion and change the world.</h3><div class="btn-group"><a class="offer-btn upper">shop Women</a><a class="offer-btn upper">shop Men</a></div></div><div class="col"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div></div></div></section><section id="why"><div class="container"><div class="row"><div class="col-md-3 yes"><h2 class="why-title upper">Yes</h2><ul class="why-list"><li class="why-list__item">+ 56% Recycled denim</li><li class="why-list__item">+ saves 76% CO2</li><li class="why-list__item">+ 100% recyclable</li><li class="why-list__item">+ saves 6639 liter water</li><li class="why-list__item">+ 100% Made in EU</li></ul></div><div class="col-md-3 no"><h2 class="why-title upper">No</h2><ul class="why-list"><li class="why-list__item">- Toxic Chemicals</li><li class="why-list__item">- Plastic fibers or coating</li><li class="why-list__item">- Extra labels</li><li class="why-list__item">- Unethical labour</li><li class="why-list__item">- Compromises</li></ul></div><div class="col-md-6"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div></div></div></section><footer><div class="footer"><h1>Подвал сайта</h1></div></footer></body></html>
+  font-weight: 300;
+}
+
+.compromise {
+  padding: 2.4rem 0 16.7rem;
+}
+.compromise-title {
+  font-size: 4.6rem;
+  font-weight: 300;
+  padding-top: 2.4rem;
+}
+
+.shop-choose {
+  border-right: 0.1rem solid #FF0000;
+}
+.shop-choose__arrow {
+  padding-top: 5rem;
+}
+.shop-choose__title {
+  font-size: 6.5rem;
+  padding: 5.1rem 0 2.9rem 3rem;
+}
+
+.form {
+  padding: 2.9rem 0 2rem 2.6rem;
+}
+.form__title {
+  font-size: 4.8rem;
+}
+.form__paragraph {
+  padding: 3.1rem 0 0.9rem 0;
+  font-size: 2rem;
+  max-width: 41.9rem;
+  display: block;
+}
+.form__license {
+  padding-top: 8.2rem;
+  display: block;
+  color: #FF0000;
+}
+.form-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 35.48rem;
+}
+.form-inner__btn {
+  color: #fff;
+  background-color: #FF0000;
+  border: 0.1rem solid #FF0000;
+  font-size: 1rem;
+  letter-spacing: 0.223rem;
+}
+.form-inner__input {
+  padding: 1.4rem 0 0.3rem 1rem;
+  border: 0.2rem solid #FF0000;
+  font-size: 0.9rem;
+  letter-spacing: 0.223rem;
+  width: 50%;
+}
+.form-inner__input:nth-child(3) {
+  width: 74%;
+}
+
+.product-featured {
+  padding: 4.6rem 0 3rem 3rem;
+}
+.product-featured__title {
+  font-size: 3.3rem;
+  margin-bottom: 41rem;
+}
+.product-card {
+  border-left: 0.1rem solid #FF0000;
+}/*# sourceMappingURL=style.css.map */
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header upper">
+        <div class="container">
+          <div class="row align-self-center">
+            <nav class="col-xl-5">
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Collaborations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
+              </ul>
+            </nav><a class="col-xl-2" href="#"><img class="nav-logo" src="../images/logo.png" alt="logo"/></a>
+            <nav class="col-xl-5">
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">HNST About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CART (0)</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="offer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col offer"><span class="offer-quote upper">beat the lockdown blues with</span>
+            <h1 class="offer-title">The world's most sustainable denim collection.</h1>
+            <h3 class="offer-subtitle">Let's ditch fast fashion and change the world.</h3>
+            <div class="btn-group"><a class="offer-btn upper">shop Women</a><a class="offer-btn upper">shop Men</a></div>
+          </div>
+          <div class="col"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div>
+        </div>
+      </div>
+    </section>
+    <section id="why">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 yes g-0">
+            <h2 class="why-title upper">Yes</h2>
+            <ul class="why-list">
+              <li class="why-list__item">+ 56% Recycled denim</li>
+              <li class="why-list__item">+ saves 76% CO2</li>
+              <li class="why-list__item">+ 100% recyclable</li>
+              <li class="why-list__item">+ saves 6639 liter water</li>
+              <li class="why-list__item">+ 100% Made in EU</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 no g-0">
+            <h2 class="why-title upper">No</h2>
+            <ul class="why-list">
+              <li class="why-list__item">- Toxic Chemicals</li>
+              <li class="why-list__item">- Plastic fibers or coating</li>
+              <li class="why-list__item">- Extra labels</li>
+              <li class="why-list__item">- Unethical labour</li>
+              <li class="why-list__item">- Compromises</li>
+            </ul>
+          </div>
+          <div class="col-lg-6"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
+        </div>
+      </div>
+    </section>
+    <section class="compromise" id="compromise">
+      <div class="container">
+        <div class="row">
+          <div class="col"><span class="compromise-title">Jeans that doesn't compromise on style, sustainability or quality.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 g-0">
+            <div class="shop-choose"><img class="shop-choose__photo" src="../images/women.png" alt="women"/>
+              <div class="row">
+                <h2 class="col-sm-6 shop-choose__title">Women</h2>
+                <div class="col-sm-6"><img class="shop-choose__arrow" src="../images/arrow.png" alt="arrow"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 g-0">
+            <div class="shop-choose"><img class="shop-choose__photo" src="../images/men.png" alt="men"/>
+              <div class="row">
+                <h2 class="col-sm-6 shop-choose__title">Men</h2>
+                <div class="col-sm-6"><img class="shop-choose__arrow" src="../images/arrow.png" alt="arrow"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mail" id="mail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 g-0"><img class="mail-photo" src="../images/jeans.png" alt="offer"/></div>
+          <div class="col-md-6 g-0">
+            <form class="form">
+              <h2 class="form__title">Newsletter</h2>
+              <p class="form__paragraph">Honestly good e-mails. We swear. Receive offers, updates, tips and exclusive invites.</p>
+              <div class="form-inner">
+                <input class="form-inner__input upper" type="text" placeholder="First name" name="firstName"/>
+                <input class="form-inner__input upper" type="text" placeholder="Last name" name="lastName"/>
+                <input class="form-inner__input upper" type="text" placeholder="Email" name="mail"/>
+                <button class="form-inner__btn upper">subscribe</button>
+              </div><a class="form__license">Read our privacy policy</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product" id="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 g-0">
+            <div class="product-featured">
+              <h2 class="product-featured__title upper">Featured Products</h2><img class="product-featured__arrow" src="../images/arrow.png" alt="arrow"/>
+            </div>
+          </div>
+          <div class="col-md-3 g-0 margin">
+            <div class="product-card"><img class="product-card__image" src="../images/1.png" alt="arrow"/>
+              <div class="row margin">
+                <div class="col-6">
+                  <h4 class="product-card__title upper">Straight</h4>
+                  <p class="product-card__description">Straight fit</p>
+                </div>
+                <div class="col-6"><span>€135,00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 g-0 margin">
+            <div class="product-card"><img class="product-card__image" src="../images/2.png" alt="arrow"/>
+              <div class="row margin">
+                <div class="col-6">
+                  <h4 class="product-card__title upper">Straight</h4>
+                  <p class="product-card__description">Mom fit</p>
+                </div>
+                <div class="col-6"><span>€95,00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 g-0 margin">
+            <div class="product-card"><img class="product-card__image" src="../images/3.png" alt="arrow"/>
+              <div class="row margin">
+                <div class="col-6">
+                  <h4 class="product-card__title upper">Tapered</h4>
+                  <p class="product-card__description">Tapered fit</p>
+                </div>
+                <div class="col-6"><span>€165,00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <h1>Подвал сайта</h1>
+      </div>
+    </footer>
+  </body>
+</html>

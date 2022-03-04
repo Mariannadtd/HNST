@@ -28,7 +28,7 @@ html(lang="ru")
     section#why
       .container
         .row
-          .col-md-3.yes
+          .col-lg-3.yes.g-0
             h2.why-title.upper Yes
             ul.why-list
               li.why-list__item + 56% Recycled denim
@@ -36,7 +36,7 @@ html(lang="ru")
               li.why-list__item + 100% recyclable
               li.why-list__item + saves 6639 liter water
               li.why-list__item + 100% Made in EU
-          .col-md-3.no
+          .col-lg-3.no.g-0
             h2.why-title.upper No
             ul.why-list
               li.why-list__item - Toxic Chemicals
@@ -44,8 +44,77 @@ html(lang="ru")
               li.why-list__item - Extra labels
               li.why-list__item - Unethical labour
               li.why-list__item - Compromises
-          .col-md-6
+          .col-lg-6
             img(src="../images/secondsection.png", alt="offer").why-photo
+
+    section#compromise.compromise
+      .container
+        .row
+          .col
+            span.compromise-title Jeans that doesn't compromise on style, sustainability or quality.
+
+    section#shop.shop
+      .container
+        .row
+          .col-md-6.g-0
+            .shop-choose
+              img(src="../images/women.png", alt="women").shop-choose__photo
+              .row
+                h2.col-sm-6.shop-choose__title Women
+                .col-sm-6
+                  img(src="../images/arrow.png", alt="arrow").shop-choose__arrow
+          .col-md-6.g-0
+            .shop-choose
+              img(src="../images/men.png", alt="men").shop-choose__photo
+              .row
+                h2.col-sm-6.shop-choose__title Men
+                .col-sm-6
+                  img(src="../images/arrow.png", alt="arrow").shop-choose__arrow
+
+    section#mail.mail
+      .container
+        .row
+          .col-md-6.g-0
+            img(src="../images/jeans.png", alt="offer").mail-photo
+          .col-md-6.g-0
+            include modules/mail
+
+    section#product.product
+      .container
+        .row
+          .col-md-3.g-0
+            .product-featured
+              h2.product-featured__title.upper Featured Products
+              img(src="../images/arrow.png", alt="arrow").product-featured__arrow
+          .col-md-3.g-0.margin
+            .product-card
+              img(src="../images/1.png", alt="arrow").product-card__image
+              .row.margin
+                .col-6
+                  h4.product-card__title.upper Straight
+                  p.product-card__description Straight fit
+                .col-6
+                  span €135,00
+          .col-md-3.g-0.margin
+            .product-card
+              img(src="../images/2.png", alt="arrow").product-card__image
+              .row.margin
+                .col-6
+                  h4.product-card__title.upper Straight
+                  p.product-card__description Mom fit
+                .col-6
+                  span €95,00
+          .col-md-3.g-0.margin
+            .product-card
+              img(src="../images/3.png", alt="arrow").product-card__image
+              .row.margin
+                .col-6
+                  h4.product-card__title.upper Tapered
+                  p.product-card__description Tapered fit
+                .col-6
+                  span €165,00
+
+
 
 
     include modules/footer
