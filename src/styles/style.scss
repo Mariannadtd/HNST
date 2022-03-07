@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro&display=swap');
 
 $main: #FF0000;
+.upper {
+  text-transform: uppercase;
+}
+.margin {
+  padding-top: 3rem;
+}
+.border {
+  border-left: .1rem solid $main;
+}
 
 html {
   font-size: 10px;
@@ -35,12 +44,7 @@ input[type="text"]::-webkit-input-placeholder {
 input[type="text"]::-moz-placeholder {
   color: $main;
 }
-.upper {
-  text-transform: uppercase;
-}
-.margin {
-  padding-top: 3rem;
-}
+
 
 
 
@@ -216,6 +220,69 @@ input[type="text"]::-moz-placeholder {
     }
   }
   &-card {
-    border-left: .1rem solid $main;
+    margin-left: 2.6rem;
   }
+}
+
+
+
+//    Press/slider
+.press {
+  padding: 3rem 0 3rem 3rem;
+  &-btn {
+    border: .1rem solid $main;
+    margin-top: 32.8rem;
+    border-radius: 50%;
+    padding: 2rem 1.5rem;
+    font-size: 1.5rem;
+    color: $main;
+    letter-spacing: .13rem;
+  }
+  &__title {
+    font-size: 4.8rem;
+  }
+  &-slide {
+    &__subtitle {
+      font-size: 2.2rem;
+      max-width: 65rem;
+      margin-top: 4.4rem;
+      display: block;
+    }
+  }
+}
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 3rem 0 3rem 3rem;
+}
+.slide {
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+.dot.active {
+  background-color: $main;
+}
+.dots-wrapper {
+  display: flex;
+  margin-top: 15px;
+}
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: .1rem solid $main;
+  margin-right: 1.4rem;
+  cursor: pointer;
+  &:last-child {
+  margin-right: 0;
+  }
+}
+.btn-prev {
+  display: block;
+}
+.btn-next {
+  display: block;
 }

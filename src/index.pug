@@ -86,7 +86,7 @@ html(lang="ru")
             .product-featured
               h2.product-featured__title.upper Featured Products
               img(src="../images/arrow.png", alt="arrow").product-featured__arrow
-          .col-md-3.g-0.margin
+          .col-md-3.g-0.margin.border
             .product-card
               img(src="../images/1.png", alt="arrow").product-card__image
               .row.margin
@@ -95,7 +95,7 @@ html(lang="ru")
                   p.product-card__description Straight fit
                 .col-6
                   span €135,00
-          .col-md-3.g-0.margin
+          .col-md-3.g-0.margin.border
             .product-card
               img(src="../images/2.png", alt="arrow").product-card__image
               .row.margin
@@ -104,7 +104,7 @@ html(lang="ru")
                   p.product-card__description Mom fit
                 .col-6
                   span €95,00
-          .col-md-3.g-0.margin
+          .col-md-3.g-0.margin.border
             .product-card
               img(src="../images/3.png", alt="arrow").product-card__image
               .row.margin
@@ -114,7 +114,30 @@ html(lang="ru")
                 .col-6
                   span €165,00
 
-
-
+    section#press.press
+      .container
+        .row
+          .col-md-6
+            h2.press__title Press
+            a
+              button.press-btn.upper Read all
+          .col-md-6.border
+            .slider
+              .slide.active
+                img(src="../images/forbes.png", alt="forbes").slide__img
+                p.press-slide__subtitle "This model addresses several limitations of its competitors, namely denim landfill waste and excessive water consumption required to grow new virgin cotton fibres."
+              .slide
+                img(src="../images/forbes.png", alt="forbes").slide__img
+                p.press-slide__subtitle "qerfgely denim landfill waste and excessive water consumption required to grow new virgin cotton fibres."
+              .slide
+                img(src="../images/forbes.png", alt="forbes").slide__img
+                p.press-slide__subtitle "ergvv qdfvf."
+              .btn-prev
+              .btn-next
+              .dots-wrapper
+                span.dot.active
+                span.dot
+                span.dot
 
     include modules/footer
+    script(src='main.js')
