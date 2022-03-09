@@ -91,17 +91,19 @@ input[type=text]::-moz-placeholder {
   font-family: "Source Sans Pro", sans-serif !important;
 }
 .nav-logo {
-  margin-top: 1.2rem;
   width: 11rem;
+  display: block;
+  margin: 1.2rem auto;
 }
 .nav-item {
   padding: 2.7rem 4rem 2.8rem 0rem;
-}
-.nav-item:not(:last-of-type) {
   padding-right: 4rem;
 }
 .nav-item:hover {
   border-bottom: 0.2rem solid #FF0000;
+}
+.nav-item:last-child {
+  padding-right: 0;
 }
 
 #offer {
@@ -114,8 +116,8 @@ input[type=text]::-moz-placeholder {
   border: 0.1rem solid #FF0000;
   font-size: 1.5rem;
   padding: 3rem 0;
+  width: 20rem;
   display: block;
-  max-width: 200px;
 }
 .offer-btn:nth-child(1) {
   margin-right: 3rem;
@@ -133,7 +135,7 @@ input[type=text]::-moz-placeholder {
 }
 
 .btn-group {
-  display: flex-inline;
+  display: flex;
   justify-content: center;
 }
 
@@ -196,7 +198,8 @@ input[type=text]::-moz-placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 35.48rem;
+  max-width: 35.48rem;
+  max-height: 7rem !important;
 }
 .form-inner__btn {
   color: #fff;
@@ -227,8 +230,8 @@ input[type=text]::-moz-placeholder {
   margin-left: 2.6rem;
 }
 
-.press {
-  padding: 3rem 0 3rem 3rem;
+.press-read {
+  margin: 3rem 0 3rem 3rem;
 }
 .press-btn {
   border: 0.1rem solid #FF0000;
@@ -291,6 +294,29 @@ input[type=text]::-moz-placeholder {
 
 .btn-next {
   display: block;
+}
+
+.footer-menu {
+  padding: 3rem;
+}
+.footer-socials {
+  margin-left: auto;
+}
+.footer-socials__photo {
+  margin-left: 2.6rem;
+}
+.footer__logo {
+  float: right;
+}
+.footer-bottom {
+  margin-top: 9.5rem;
+}
+.footer-list__item {
+  line-height: 2.5rem;
+}
+
+.padding-bottom {
+  padding-bottom: 1.3rem;
 }/*# sourceMappingURL=style.css.map */
     </style>
   </head>
@@ -333,7 +359,7 @@ input[type=text]::-moz-placeholder {
     <section id="why">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 yes g-0">
+          <div class="col-lg-3 yes">
             <h2 class="why-title upper">Yes</h2>
             <ul class="why-list">
               <li class="why-list__item">+ 56% Recycled denim</li>
@@ -343,7 +369,7 @@ input[type=text]::-moz-placeholder {
               <li class="why-list__item">+ 100% Made in EU</li>
             </ul>
           </div>
-          <div class="col-lg-3 no g-0">
+          <div class="col-lg-3 no">
             <h2 class="why-title upper">No</h2>
             <ul class="why-list">
               <li class="why-list__item">- Toxic Chemicals</li>
@@ -353,7 +379,7 @@ input[type=text]::-moz-placeholder {
               <li class="why-list__item">- Compromises</li>
             </ul>
           </div>
-          <div class="col-lg-6"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
+          <div class="col-lg-6 g-0"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
         </div>
       </div>
     </section>
@@ -453,8 +479,10 @@ input[type=text]::-moz-placeholder {
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="press__title">Press</h2><a>
-              <button class="press-btn upper">Read all</button></a>
+            <div class="press-read">
+              <h2 class="press__title">Press</h2><a>
+                <button class="press-btn upper">Read all</button></a>
+            </div>
           </div>
           <div class="col-md-6 border">
             <div class="slider">
@@ -491,26 +519,26 @@ input[type=text]::-moz-placeholder {
                 </div><a class="form__license">Read our privacy policy</a>
               </form>
             </div>
-            <div class="col-md-6 g-0">
+            <div class="col-md-6 g-0 footer-menu border">
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <ul class="footer-list">
-                    <li class="footer-list__item upper">Shop</li>
+                    <li class="footer-list__item upper padding-bottom">Shop</li>
                     <li class="footer-list__item">Women</li>
                     <li class="footer-list__item">Men</li>
                   </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <ul class="footer-list">
-                    <li class="footer-list__item upper">HNST</li>
+                    <li class="footer-list__item upper padding-bottom">HNST</li>
                     <li class="footer-list__item">Home page</li>
                     <li class="footer-list__item">HNST About</li>
                     <li class="footer-list__item">Contact</li>
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <ul class="footer-list">
-                    <li class="footer-list__item upper">Legal</li>
+                    <li class="footer-list__item upper padding-bottom">Legal</li>
                     <li class="footer-list__item">Terms of Service</li>
                     <li class="footer-list__item">Privacy Policy</li>
                     <li class="footer-list__item">Cookie Policy</li>
@@ -518,9 +546,14 @@ input[type=text]::-moz-placeholder {
                     <li class="footer-list__item">Refund and Returns Policy</li>
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="footer-socials"><img class="footer-socials__photo" src="../images/instasymbol.png" alt="offer"/><img class="footer-socials__photo" src="../images/facebooksymbol.png" alt="offer"/><img class="footer-socials__photo" src="../images/twittersymbol.png" alt="offer"/></div>
                 </div>
+              </div>
+              <div class="footer-bottom"></div>
+              <div class="row">
+                <div class="col-md-6 align-self-end"><span class="footer__rights">© Circular Textiles 2021</span></div>
+                <div class="col-md-6"><img class="footer__logo" src="../images/logo.png" alt="logo"/></div>
               </div>
             </div>
           </div>
