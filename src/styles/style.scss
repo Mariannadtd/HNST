@@ -253,6 +253,9 @@ input[type="text"]::-moz-placeholder {
       margin-top: 4.4rem;
       display: block;
     }
+    &__title {
+      font-size: 4.8rem;
+    }
   }
 }
 .slider {
@@ -260,6 +263,9 @@ input[type="text"]::-moz-placeholder {
   flex-wrap: wrap;
   align-content: space-between;
   padding: 3rem 0 3rem 3rem;
+  &-inner {
+    height: 41.5rem;
+  }
 }
 .slide {
   display: none;

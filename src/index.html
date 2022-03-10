@@ -251,12 +251,18 @@ input[type=text]::-moz-placeholder {
   margin-top: 4.4rem;
   display: block;
 }
+.press-slide__title {
+  font-size: 4.8rem;
+}
 
 .slider {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   padding: 3rem 0 3rem 3rem;
+}
+.slider-inner {
+  height: 41.5rem;
 }
 
 .slide {
@@ -486,17 +492,17 @@ input[type=text]::-moz-placeholder {
           </div>
           <div class="col-md-6 border">
             <div class="slider">
-              <div class="slide active"><img class="slide__img" src="../images/forbes.png" alt="forbes"/>
-                <p class="press-slide__subtitle">"This model addresses several limitations of its competitors, namely denim landfill waste and excessive water consumption required to grow new virgin cotton fibres."</p>
+              <div class="slider-inner">
+                <div class="slide active"><span class="press-slide__title upper">Forbes</span>
+                  <blockquote class="press-slide__subtitle">"This model addresses several limitations of its competitors, namely denim landfill waste and excessive water consumption required to grow new virgin cotton fibres."</blockquote>
+                </div>
+                <div class="slide"><span class="press-slide__title upper">Tatler</span>
+                  <blockquote class="press-slide__subtitle">"I owe my success to having listened respectfully to the very best advice, and then going away and doing the exact opposite."</blockquote>
+                </div>
+                <div class="slide"><span class="press-slide__title upper">Cosmopolitan</span>
+                  <blockquote class="press-slide__subtitle">"Success is not final; failure is not fatal: It is the courage to continue that counts."</blockquote>
+                </div>
               </div>
-              <div class="slide"><img class="slide__img" src="../images/forbes.png" alt="forbes"/>
-                <p class="press-slide__subtitle">"qerfgely denim landfill waste and excessive water consumption required to grow new virgin cotton fibres."</p>
-              </div>
-              <div class="slide"><img class="slide__img" src="../images/forbes.png" alt="forbes"/>
-                <p class="press-slide__subtitle">"ergvv qdfvf."</p>
-              </div>
-              <div class="btn-prev"></div>
-              <div class="btn-next"></div>
               <div class="dots-wrapper"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
             </div>
           </div>
