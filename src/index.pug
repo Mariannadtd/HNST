@@ -56,20 +56,18 @@ html(lang="ru")
     section#shop.shop
       .container
         .row
-          .col-md-6.g-0
-            .shop-choose
-              img(src="../images/women.png", alt="women").shop-choose__photo
-              .row
-                h2.col-sm-6.shop-choose__title Women
-                .col-sm-6
-                  img(src="../images/arrow.png", alt="arrow").shop-choose__arrow
-          .col-md-6.g-0
-            .shop-choose
-              img(src="../images/men.png", alt="men").shop-choose__photo
-              .row
-                h2.col-sm-6.shop-choose__title Men
-                .col-sm-6
-                  img(src="../images/arrow.png", alt="arrow").shop-choose__arrow
+          a.col-md-6.g-0.shop-button
+            img(src="../images/women.png", alt="women").shop-button__photo
+            row.g-0.d-flex
+              h2.col-sm-6.shop-button__title Women
+              .col-sm-6
+                img(src="../images/arrow.png", alt="arrow").shop-button__arrow
+          a.col-md-6.g-0.shop-button.border
+            img(src="../images/men.png", alt="men").shop-button__photo
+            row.g-0.d-flex
+              h2.col-sm-6.shop-button__title Men
+              .col-sm-6
+                img(src="../images/arrow.png", alt="arrow").shop-button__arrow
 
     section#mail.mail
       .container
@@ -83,10 +81,10 @@ html(lang="ru")
       .container
         .row
           .col-md-3.g-0
-            .product-featured
+            .product-featured.hover
               h2.product-featured__title.upper Featured Products
               img(src="../images/arrow.png", alt="arrow").product-featured__arrow
-          .col-md-3.g-0.margin.border
+          .col-md-3.g-0.margin.border.hover
             .product-card
               img(src="../images/1.png", alt="arrow").product-card__image
               .row.margin
@@ -95,7 +93,7 @@ html(lang="ru")
                   p.product-card__description Straight fit
                 .col-6
                   span €135,00
-          .col-md-3.g-0.margin.border
+          .col-md-3.g-0.margin.border.hover
             .product-card
               img(src="../images/2.png", alt="arrow").product-card__image
               .row.margin
@@ -104,7 +102,7 @@ html(lang="ru")
                   p.product-card__description Mom fit
                 .col-6
                   span €95,00
-          .col-md-3.g-0.margin.border
+          .col-md-3.g-0.margin.border.hover
             .product-card
               img(src="../images/3.png", alt="arrow").product-card__image
               .row.margin

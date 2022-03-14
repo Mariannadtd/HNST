@@ -31,6 +31,11 @@
   border-left: 0.1rem solid #FF0000;
 }
 
+.hover:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
 html {
   font-size: 10px;
 }
@@ -57,7 +62,7 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 section {
@@ -86,7 +91,6 @@ input[type=text]::-moz-placeholder {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   padding-left: 0;
   font-family: "Source Sans Pro", sans-serif !important;
 }
@@ -97,10 +101,14 @@ input[type=text]::-moz-placeholder {
 }
 .nav-item {
   padding: 2.7rem 4rem 2.8rem 0rem;
-  padding-right: 4rem;
 }
-.nav-item:hover {
-  border-bottom: 0.2rem solid #FF0000;
+.nav-item:hover:after {
+  content: "";
+  position: absolute;
+  border-bottom: 0.4rem solid #FF0000;
+  width: 4rem;
+  display: block;
+  top: 7.3rem;
 }
 .nav-item:last-child {
   padding-right: 0;
@@ -118,6 +126,10 @@ input[type=text]::-moz-placeholder {
   padding: 3rem 0;
   width: 20rem;
   display: block;
+}
+.offer-btn:hover {
+  color: white;
+  background-color: #FF0000;
 }
 .offer-btn:nth-child(1) {
   margin-right: 3rem;
@@ -166,13 +178,17 @@ input[type=text]::-moz-placeholder {
   padding-top: 2.4rem;
 }
 
-.shop-choose {
-  border-right: 0.1rem solid #FF0000;
+.shop-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #FF0000;
 }
-.shop-choose__arrow {
+.shop-button__arrow {
   padding-top: 5rem;
+  margin-right: 3rem;
+  float: right;
 }
-.shop-choose__title {
+.shop-button__title {
   font-size: 6.5rem;
   padding: 5.1rem 0 2.9rem 3rem;
 }
@@ -241,6 +257,11 @@ input[type=text]::-moz-placeholder {
   font-size: 1.5rem;
   color: #FF0000;
   letter-spacing: 0.13rem;
+  background-color: #F5F2EA;
+}
+.press-btn:hover {
+  color: #fff;
+  background-color: #FF0000;
 }
 .press__title {
   font-size: 4.8rem;
@@ -315,10 +336,17 @@ input[type=text]::-moz-placeholder {
   float: right;
 }
 .footer-bottom {
-  margin-top: 9.5rem;
+  margin-top: 9.7rem;
 }
 .footer-list__item {
-  line-height: 2.5rem;
+  line-height: 2.8rem;
+}
+.footer-list__item:hover:after {
+  content: "";
+  position: absolute;
+  border-bottom: 0.3rem solid #FF0000;
+  width: 4rem;
+  display: block;
 }
 
 .padding-bottom {
@@ -398,24 +426,15 @@ input[type=text]::-moz-placeholder {
     </section>
     <section class="shop" id="shop">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 g-0">
-            <div class="shop-choose"><img class="shop-choose__photo" src="../images/women.png" alt="women"/>
-              <div class="row">
-                <h2 class="col-sm-6 shop-choose__title">Women</h2>
-                <div class="col-sm-6"><img class="shop-choose__arrow" src="../images/arrow.png" alt="arrow"/></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 g-0">
-            <div class="shop-choose"><img class="shop-choose__photo" src="../images/men.png" alt="men"/>
-              <div class="row">
-                <h2 class="col-sm-6 shop-choose__title">Men</h2>
-                <div class="col-sm-6"><img class="shop-choose__arrow" src="../images/arrow.png" alt="arrow"/></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row"><a class="col-md-6 g-0 shop-button"><img class="shop-button__photo" src="../images/women.png" alt="women"/>
+            <row class="g-0 d-flex">
+              <h2 class="col-sm-6 shop-button__title">Women</h2>
+              <div class="col-sm-6"><img class="shop-button__arrow" src="../images/arrow.png" alt="arrow"/></div>
+            </row></a><a class="col-md-6 g-0 shop-button border"><img class="shop-button__photo" src="../images/men.png" alt="men"/>
+            <row class="g-0 d-flex">
+              <h2 class="col-sm-6 shop-button__title">Men</h2>
+              <div class="col-sm-6"><img class="shop-button__arrow" src="../images/arrow.png" alt="arrow"/></div>
+            </row></a></div>
       </div>
     </section>
     <section class="mail" id="mail">
@@ -441,11 +460,11 @@ input[type=text]::-moz-placeholder {
       <div class="container">
         <div class="row">
           <div class="col-md-3 g-0">
-            <div class="product-featured">
+            <div class="product-featured hover">
               <h2 class="product-featured__title upper">Featured Products</h2><img class="product-featured__arrow" src="../images/arrow.png" alt="arrow"/>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border">
+          <div class="col-md-3 g-0 margin border hover">
             <div class="product-card"><img class="product-card__image" src="../images/1.png" alt="arrow"/>
               <div class="row margin">
                 <div class="col-6">
@@ -456,7 +475,7 @@ input[type=text]::-moz-placeholder {
               </div>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border">
+          <div class="col-md-3 g-0 margin border hover">
             <div class="product-card"><img class="product-card__image" src="../images/2.png" alt="arrow"/>
               <div class="row margin">
                 <div class="col-6">
@@ -467,7 +486,7 @@ input[type=text]::-moz-placeholder {
               </div>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border">
+          <div class="col-md-3 g-0 margin border hover">
             <div class="product-card"><img class="product-card__image" src="../images/3.png" alt="arrow"/>
               <div class="row margin">
                 <div class="col-6">
@@ -526,31 +545,34 @@ input[type=text]::-moz-placeholder {
               </form>
             </div>
             <div class="col-md-6 g-0 footer-menu border">
-              <div class="row">
+              <div class="row g-0">
                 <div class="col-md-3">
-                  <ul class="footer-list">
-                    <li class="footer-list__item upper padding-bottom">Shop</li>
-                    <li class="footer-list__item">Women</li>
-                    <li class="footer-list__item">Men</li>
-                  </ul>
+                  <div class="footer-menu__title">Shop
+                    <ul class="footer-list">
+                      <li class="footer-list__item">Women</li>
+                      <li class="footer-list__item">Men</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                  <ul class="footer-list">
-                    <li class="footer-list__item upper padding-bottom">HNST</li>
-                    <li class="footer-list__item">Home page</li>
-                    <li class="footer-list__item">HNST About</li>
-                    <li class="footer-list__item">Contact</li>
-                  </ul>
+                  <div class="footer-menu__title">HNST
+                    <ul class="footer-list">
+                      <li class="footer-list__item">Home page</li>
+                      <li class="footer-list__item">HNST About</li>
+                      <li class="footer-list__item">Contact</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                  <ul class="footer-list">
-                    <li class="footer-list__item upper padding-bottom">Legal</li>
-                    <li class="footer-list__item">Terms of Service</li>
-                    <li class="footer-list__item">Privacy Policy</li>
-                    <li class="footer-list__item">Cookie Policy</li>
-                    <li class="footer-list__item">Shipping Policy</li>
-                    <li class="footer-list__item">Refund and Returns Policy</li>
-                  </ul>
+                  <div class="footer-menu__title">Legal
+                    <ul class="footer-list">
+                      <li class="footer-list__item">Terms of Service</li>
+                      <li class="footer-list__item">Privacy Policy</li>
+                      <li class="footer-list__item">Cookie Policy</li>
+                      <li class="footer-list__item">Shipping Policy</li>
+                      <li class="footer-list__item">Refund and Returns Policy</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="col-md-3">
                   <div class="footer-socials"><img class="footer-socials__photo" src="../images/instasymbol.png" alt="offer"/><img class="footer-socials__photo" src="../images/facebooksymbol.png" alt="offer"/><img class="footer-socials__photo" src="../images/twittersymbol.png" alt="offer"/></div>
