@@ -1,10 +1,28 @@
+// sticky NAVBAR / burger
+const hamburger = document.querySelector("#hamburger");
+    popup = document.querySelector("#popup");
+    menu = document.querySelector("#menu").cloneNode(1);
+
+hamburger.addEventListener("click", hamburgerHandler);
+
+function hamburgerHandler(e) {
+    e.preventDefault();
+    popup.classList.toggle("open");
+    hamburger.classList.toggle("active");
+    renderPopup();
+}
+
+function renderPopup() {
+    popup.appendChild(menu);
+}
+
+
+
 //   Slider
 window.onload=function() {
-const prev = document.getElementById('btn-prev'),
-      next = document.getElementById('btn-next'),
-      slides = document.querySelectorAll('.slide'),
-      dots = document.querySelectorAll('.dot'),
-      slidesWrap = document.querySelectorAll('.slider-wrapper');
+const slides = document.querySelectorAll('.slide'),
+    dots = document.querySelectorAll('.dot'),
+    slidesWrap = document.querySelectorAll('.slider-wrapper');
 
 let index = 0;
 
@@ -59,3 +77,5 @@ dots.forEach((item,indexDot) => {
 const interval = setInterval(nextSlide, 2500);
 
 }
+
+
