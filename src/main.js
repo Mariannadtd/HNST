@@ -1,7 +1,7 @@
 // sticky NAVBAR / burger
 const hamburger = document.querySelector("#hamburger");
     popup = document.querySelector("#popup");
-    menu = document.querySelector("#menu").cloneNode(1);
+    menu = document.querySelector("#menu").cloneNode(true);
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -14,6 +14,7 @@ function hamburgerHandler(e) {
 
 function renderPopup() {
     popup.appendChild(menu);
+    menu.className = 'block';
 }
 
 
