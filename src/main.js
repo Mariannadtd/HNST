@@ -1,7 +1,7 @@
 // sticky NAVBAR / burger
 const hamburger = document.querySelector("#hamburger");
     popup = document.querySelector("#popup");
-    menu = document.querySelector("#menu").cloneNode(true);
+    menu = document.querySelector("#menu").cloneNode(1);
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -13,8 +13,10 @@ function hamburgerHandler(e) {
 }
 
 function renderPopup() {
-    popup.appendChild(menu);
-    menu.className = 'block';
+    document.querySelectorAll("#menu").forEach((menu) => {
+        popup.appendChild(menu);
+        menu.className = 'hamburger-menu';
+    });
 }
 
 
@@ -78,5 +80,4 @@ dots.forEach((item,indexDot) => {
 const interval = setInterval(nextSlide, 2500);
 
 }
-
 

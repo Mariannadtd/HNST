@@ -82,8 +82,15 @@ input[type=text]::-moz-placeholder {
   margin: 0 auto;
 }
 
-.block {
-  display: block;
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 9rem 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .header {
@@ -150,6 +157,10 @@ input[type=text]::-moz-placeholder {
     padding: 1rem 0;
     cursor: pointer;
   }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+  }
 
   .bar {
     display: block;
@@ -162,18 +173,19 @@ input[type=text]::-moz-placeholder {
 
   .popup {
     position: fixed;
-    top: 5rem;
     left: -100%;
     width: 100%;
     height: 100%;
     background-color: #fff;
     z-index: 100;
     display: flex;
-    transition: 0.3s;
   }
 
   .open {
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
 }
 #offer {
@@ -430,7 +442,7 @@ input[type=text]::-moz-placeholder {
               <div class="hamburger">
                 <div class="hamburger__field" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
               </div>
-              <div class="navbar-menu">
+              <div class="navbar-menu" id="navbar-menu">
                 <ul class="menu" id="menu">
                   <li class="menu__item"><a class="menu__link" href="#">Women</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Men</a></li>

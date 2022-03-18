@@ -54,11 +54,16 @@ input[type="text"]::-moz-placeholder {
   max-width: 144rem;
   margin: 0 auto;
 }
-.block {
-  display: block;
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 9rem 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
-
 
 
 
@@ -111,16 +116,31 @@ input[type="text"]::-moz-placeholder {
   .menu {
     display: none;
   }
-  .navbar__wrap {
+  .navbar {
+    &__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    }
   }
   .hamburger {
     display: flex;
     &__field {
       padding: 1rem 0;
       cursor: pointer;
+      // &.active.bar:nth-child(2) {
+      //   opacity: 0;
+      // }
+      // &.active.bar:nth-child(1) {
+      //   transform: translateY(8px) rotate(45deg);
+      // }
+      // &.active.bar:nth-child(3) {
+      //   transform: translateY(-8px) rotate(45deg);
+      // }
+    }
+    &-menu {
+      display: flex;
+      flex-direction: column;
     }
   }
   .bar {
@@ -133,20 +153,20 @@ input[type="text"]::-moz-placeholder {
   }
   .popup {
     position: fixed;
-    top: 5rem;
     left: -100%;
     width: 100%;
     height: 100%;
     background-color: #fff;
     z-index: 100;
     display: flex;
-    transition: 0.3s;
   }
   .open {
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
 }
-
 
 
 
