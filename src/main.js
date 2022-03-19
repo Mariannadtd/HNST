@@ -17,7 +17,7 @@ function hamburgerHandler(e) {
 function renderPopup() {
     document.querySelectorAll("#menu").forEach((menu) => {
         popup.appendChild(menu);
-        menu.classList = 'hamburger-menu';
+        menu.classList.toggle('hamburger-menu');
     });
 }
 
