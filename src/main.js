@@ -2,6 +2,7 @@
 const hamburger = document.querySelector("#hamburger");
     popup = document.querySelector("#popup");
     menu = document.querySelector("#menu").cloneNode(1);
+    body = document.body;
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -9,13 +10,14 @@ function hamburgerHandler(e) {
     e.preventDefault();
     popup.classList.toggle("open");
     hamburger.classList.toggle("active");
+    body.classList.toggle("noscroll");
     renderPopup();
 }
 
 function renderPopup() {
     document.querySelectorAll("#menu").forEach((menu) => {
         popup.appendChild(menu);
-        menu.className = 'hamburger-menu';
+        menu.classList = 'hamburger-menu';
     });
 }
 

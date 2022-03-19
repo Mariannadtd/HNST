@@ -147,7 +147,7 @@ input[type=text]::-moz-placeholder {
     transform: translateY(8px) rotate(45deg);
   }
   .hamburger__field.active.bar:nth-child(3) {
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
   .hamburger-menu {
     display: flex;
@@ -178,6 +178,10 @@ input[type=text]::-moz-placeholder {
     display: flex;
     flex-direction: column;
     justify-content: start;
+  }
+
+  body.noscroll {
+    overflow: hidden;
   }
 }
 #offer {
