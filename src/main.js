@@ -1,8 +1,8 @@
 // sticky NAVBAR / burger
 const hamburger = document.querySelector("#hamburger");
-    popup = document.querySelector("#popup");
-    menu = document.querySelector("#menu").cloneNode(1);
-    body = document.body;
+const popup = document.querySelector("#popup");
+// тут будем хранить клоны нашего меню
+const cloneNodes = [];
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -10,14 +10,27 @@ function hamburgerHandler(e) {
     e.preventDefault();
     popup.classList.toggle("open");
     hamburger.classList.toggle("active");
-    body.classList.toggle("noscroll");
-    renderPopup();
+    // если меню открыто и мы хотим его закрыть вызываем unmountPopup (cloneNodes.length > 0)
+    // если меню закрыто, тогда откроем его renderPopup
+    cloneNodes.length ? unmountPopup() : renderPopup();
+}
+
+// закрываем попап удаляем клонированное меню и очищаем cloneNodes
+function unmountPopup() {
+    cloneNodes.forEach(node => node.remove());
+    cloneNodes.length = 0;
 }
 
 function renderPopup() {
     document.querySelectorAll("#menu").forEach((menu) => {
-        popup.appendChild(menu);
-        menu.classList.toggle('hamburger-menu');
+        // создаем клоны меню
+        const cloneMenu = menu.cloneNode(true);
+        // заполняем клонами массив
+        cloneNodes.push(cloneMenu);
+        // добавляем клоны в popup
+        popup.appendChild(cloneMenu);
+        
+        cloneMenu.className = 'hamburger-menu';
     });
 }
 
