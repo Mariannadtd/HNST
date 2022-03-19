@@ -26,6 +26,11 @@ body {
   font-size: 13px;
   font-family: "Roboto", sans-serif;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 11px;
+  }
+}
 
 ul, li {
   list-style: none;

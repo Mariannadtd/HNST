@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro&display=swap');
 
 $main: #FF0000;
+
+$minmob:        320px;
+$mob:           576px;
+$tab:           768px;
+$desk:          992px;
+$desk_hd:      1200px;
+$desk_4k:     1400px;
+
 .upper {
   text-transform: uppercase;
 }
@@ -25,6 +33,9 @@ body {
   color: $main;
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
+  @media (max-width: $tab) {
+    font-size: 11px;
+  }
 }
 ul, li {
   list-style: none;
