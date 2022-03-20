@@ -21,8 +21,9 @@
 //     });
 // }
 const hamburger = document.querySelector("#hamburger");
-const popup = document.querySelector("#popup");
-const cloneNodes = [];
+    body = document.body;
+    popup = document.querySelector("#popup");
+    cloneNodes = [];
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -31,6 +32,7 @@ function hamburgerHandler(e) {
     popup.classList.toggle("open");
     hamburger.classList.toggle("active");
     cloneNodes.length ? unmountPopup() : renderPopup();
+    body.classList.toggle("noscroll");
 }
 
 function unmountPopup() {
