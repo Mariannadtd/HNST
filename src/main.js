@@ -1,8 +1,28 @@
 // sticky NAVBAR / burger
+// const hamburger = document.querySelector("#hamburger");
+//     popup = document.querySelector("#popup");
+//     menu = document.querySelector("#menu").cloneNode(1);
+//     body = document.body;
+
+// hamburger.addEventListener("click", hamburgerHandler);
+
+// function hamburgerHandler(e) {
+//     e.preventDefault();
+//     popup.classList.toggle("open");
+//     hamburger.classList.toggle("active");
+//     body.classList.toggle("noscroll");
+//     renderPopup();
+// }
+
+// function renderPopup() {
+//     document.querySelectorAll("#menu").forEach((menu) => {
+//         popup.appendChild(menu);
+//         menu.classList.toggle('hamburger-menu');
+//     });
+// }
 const hamburger = document.querySelector("#hamburger");
-    popup = document.querySelector("#popup");
-    menu = document.querySelector("#menu").cloneNode(1);
-    body = document.body;
+const popup = document.querySelector("#popup");
+const cloneNodes = [];
 
 hamburger.addEventListener("click", hamburgerHandler);
 
@@ -10,16 +30,24 @@ function hamburgerHandler(e) {
     e.preventDefault();
     popup.classList.toggle("open");
     hamburger.classList.toggle("active");
-    body.classList.toggle("noscroll");
-    renderPopup();
+    cloneNodes.length ? unmountPopup() : renderPopup();
+}
+
+function unmountPopup() {
+    cloneNodes.forEach(node => node.remove());
+    cloneNodes.length = 0;
 }
 
 function renderPopup() {
     document.querySelectorAll("#menu").forEach((menu) => {
-        popup.appendChild(menu);
-        menu.classList.toggle('hamburger-menu');
+        const cloneMenu = menu.cloneNode(true);
+        cloneNodes.push(cloneMenu);
+        popup.appendChild(cloneMenu);
+
+        cloneMenu.className = 'hamburger-menu';
     });
 }
+
 
 
 
