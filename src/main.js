@@ -50,6 +50,13 @@ function renderPopup() {
     });
 }
 
+const links = Array.from(cloneMenu.children);
+
+links.forEach((link) => {
+    link.addEventListener("click", closeOnClick);
+});
+
+
 
 
 
