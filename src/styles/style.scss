@@ -2,12 +2,12 @@
 
 $main: #FF0000;
 
-$minmob:        320px;
-$mob:           576px;
-$tab:           768px;
-$desk:          992px;
-$desk_hd:      1200px;
-$desk_4k:     1400px;
+$extra-small:        320px;
+$small:           576px;
+$medium:           768px;
+$large:          992px;
+$x-large:      1200px;
+$xx-large:     1400px;
 
 .upper {
   text-transform: uppercase;
@@ -33,7 +33,7 @@ body {
   color: $main;
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
-  @media (max-width: $tab) {
+  @media (max-width: $large) {
     font-size: 11px;
   }
 }
@@ -77,18 +77,10 @@ input[type="text"]::-moz-placeholder {
   &:hover {
     color: $main;
   }
-  // &.menu {
-  //   &__item {
-  //     padding: 1.5rem 0;
-  //     display: flex;
-  //     justify-content: center;
-  //     &:hover {
-  //       background-color: #F5F2EA;
-  //       color: $main;
-  //       &:after {
-  //         display: none;
-  //       }
-  //     }
+}
+.overflow {
+  overflow:hidden;
+  object-fit: cover;
 }
 
 
@@ -138,7 +130,7 @@ input[type="text"]::-moz-placeholder {
 .popup {
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: $large) {
   .menu {
     display: none;
   }
@@ -154,14 +146,14 @@ input[type="text"]::-moz-placeholder {
     &__field {
       padding: 1rem 0;
       cursor: pointer;
-      &.active.bar:nth-child(2) {
+      &.active .bar:nth-child(2) {
         opacity: 0;
       }
-      &.active.bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+      &.active .bar:nth-child(1) {
+        transform: translateY(9.2px) rotate(45deg);
       }
-      &.active.bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+      &.active .bar:nth-child(3) {
+        transform: translateY(-9.2px) rotate(-45deg);
       }
     }
     &-menu {
@@ -223,6 +215,9 @@ input[type="text"]::-moz-placeholder {
     &:nth-child(1) {
       margin-right: 3rem;
     }
+    @media (max-width: $large) {
+      margin-bottom: 7.3rem;
+    }
   }
   &-quote {
     font-size: 1.9rem;
@@ -239,6 +234,9 @@ input[type="text"]::-moz-placeholder {
 .btn-group {
   display: flex;
   justify-content: center;
+    @media (max-width: $small) {
+    display: inline-block;
+  }
 }
 
 
@@ -250,6 +248,9 @@ input[type="text"]::-moz-placeholder {
 .yes, .no {
   border-right: .1rem solid $main;
   padding-left: 3rem;
+  @media (max-width: $large) {
+    margin-bottom: 7.3rem;
+  }
 }
 .why {
   &-title {
@@ -343,6 +344,8 @@ input[type="text"]::-moz-placeholder {
 
 
 
+
+
 //    Product section
 .product {
   &-featured {
@@ -350,6 +353,15 @@ input[type="text"]::-moz-placeholder {
     &__title {
       font-size: 3.3rem;
       margin-bottom: 41rem;
+      @media (max-width: $medium) {
+        margin-bottom: 15rem;
+
+      }
+    }
+    &__arrow {
+      @media (max-width: $medium) {
+        transform: rotate(90deg)
+      }
     }
   }
   &-card {

@@ -26,7 +26,7 @@ body {
   font-size: 13px;
   font-family: "Roboto", sans-serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   body {
     font-size: 11px;
   }
@@ -81,6 +81,12 @@ input[type=text]::-moz-placeholder {
   color: #FF0000;
 }
 
+.overflow {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header {
   padding: 0 2.5rem;
   align-items: center;
@@ -127,7 +133,7 @@ input[type=text]::-moz-placeholder {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   .menu {
     display: none;
   }
@@ -145,14 +151,14 @@ input[type=text]::-moz-placeholder {
     padding: 1rem 0;
     cursor: pointer;
   }
-  .hamburger__field.active.bar:nth-child(2) {
+  .hamburger__field.active .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger__field.active.bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  .hamburger__field.active .bar:nth-child(1) {
+    transform: translateY(9.2px) rotate(45deg);
   }
-  .hamburger__field.active.bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .hamburger__field.active .bar:nth-child(3) {
+    transform: translateY(-9.2px) rotate(-45deg);
   }
   .hamburger-menu {
     display: flex;
@@ -210,6 +216,11 @@ input[type=text]::-moz-placeholder {
 .offer-btn:nth-child(1) {
   margin-right: 3rem;
 }
+@media (max-width: 992px) {
+  .offer-btn {
+    margin-bottom: 7.3rem;
+  }
+}
 .offer-quote {
   font-size: 1.9rem;
 }
@@ -226,6 +237,11 @@ input[type=text]::-moz-placeholder {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 576px) {
+  .btn-group {
+    display: inline-block;
+  }
+}
 
 #why {
   background-color: #fff;
@@ -234,6 +250,11 @@ input[type=text]::-moz-placeholder {
 .yes, .no {
   border-right: 0.1rem solid #FF0000;
   padding-left: 3rem;
+}
+@media (max-width: 992px) {
+  .yes, .no {
+    margin-bottom: 7.3rem;
+  }
 }
 
 .why-title {
@@ -317,6 +338,16 @@ input[type=text]::-moz-placeholder {
 .product-featured__title {
   font-size: 3.3rem;
   margin-bottom: 41rem;
+}
+@media (max-width: 768px) {
+  .product-featured__title {
+    margin-bottom: 15rem;
+  }
+}
+@media (max-width: 768px) {
+  .product-featured__arrow {
+    transform: rotate(90deg);
+  }
 }
 .product-card {
   margin-left: 2.6rem;

@@ -15,35 +15,37 @@ html(lang="ru")
     section#offer
       .container
         .row.align-items-center
-          .col.offer
+          .col-lg-6.col.offer
             span.offer-quote.upper beat the lockdown blues with
             h1.offer-title The world's most sustainable denim collection.
             h3.offer-subtitle Let's ditch fast fashion and change the world.
             .btn-group
               a.offer-btn.upper shop Women
               a.offer-btn.upper shop Men
-          .col
+          .col-lg-6.col.g-0
             img(src="../images/offer.png", alt="offer").offer-photo
 
     section#why
       .container
         .row
-          .col-lg-3.yes
-            h2.why-title.upper Yes
-            ul.why-list
-              li.why-list__item + 56% Recycled denim
-              li.why-list__item + saves 76% CO2
-              li.why-list__item + 100% recyclable
-              li.why-list__item + saves 6639 liter water
-              li.why-list__item + 100% Made in EU
-          .col-lg-3.no
-            h2.why-title.upper No
-            ul.why-list
-              li.why-list__item - Toxic Chemicals
-              li.why-list__item - Plastic fibers or coating
-              li.why-list__item - Extra labels
-              li.why-list__item - Unethical labour
-              li.why-list__item - Compromises
+          .col-lg-6.col
+            .row
+              .col-md-6.col.yes
+                h2.why-title.upper Yes
+                ul.why-list
+                  li.why-list__item + 56% Recycled denim
+                  li.why-list__item + saves 76% CO2
+                  li.why-list__item + 100% recyclable
+                  li.why-list__item + saves 6639 liter water
+                  li.why-list__item + 100% Made in EU
+              .col-md-6.col.no
+                h2.why-title.upper No
+                ul.why-list
+                  li.why-list__item - Toxic Chemicals
+                  li.why-list__item - Plastic fibers or coating
+                  li.why-list__item - Extra labels
+                  li.why-list__item - Unethical labour
+                  li.why-list__item - Compromises
           .col-lg-6.g-0
             img(src="../images/secondsection.png", alt="offer").why-photo
 
@@ -72,45 +74,48 @@ html(lang="ru")
     section#mail.mail
       .container
         .row
-          .col-md-6.g-0
-            img(src="../images/jeans.png", alt="offer").mail-photo
-          .col-md-6.g-0
+          .col-lg-6.col-md-12.g-0.overflow
+            img(src="../images/jeans.png", alt="mail").mail-photo
+          .col-lg-6.col-md-12.g-0
             include modules/mail
 
     section#product.product
       .container
         .row
-          .col-md-3.g-0
+          .col-xl-3.col-md-6.g-0
             .product-featured.hover
               h2.product-featured__title.upper Featured Products
               img(src="../images/arrow.png", alt="arrow").product-featured__arrow
-          .col-md-3.g-0.margin.border.hover
+          .col-xl-3.col-md-6.g-0.margin.border.hover
             .product-card
-              img(src="../images/1.png", alt="arrow").product-card__image
-              .row.margin
-                .col-6
-                  h4.product-card__title.upper Straight
-                  p.product-card__description Straight fit
-                .col-6
-                  span €135,00
-          .col-md-3.g-0.margin.border.hover
+              .overflow
+                img(src="../images/1.png", alt="arrow").product-card__image
+                .row.margin
+                  .col-6
+                    h4.product-card__title.upper Straight
+                    p.product-card__description Straight fit
+                  .col-6
+                    span €135,00
+          .col-xl-3.col-md-6.g-0.margin.border.hover
             .product-card
-              img(src="../images/2.png", alt="arrow").product-card__image
-              .row.margin
-                .col-6
-                  h4.product-card__title.upper Straight
-                  p.product-card__description Mom fit
-                .col-6
-                  span €95,00
-          .col-md-3.g-0.margin.border.hover
+              .overflow
+                img(src="../images/2.png", alt="arrow").product-card__image.
+                .row.margin
+                  .col-6
+                    h4.product-card__title.upper Straight
+                    p.product-card__description Mom fit
+                  .col-6
+                    span €95,00
+          .col-xl-3.col-md-6.g-0.margin.border.hover
             .product-card
-              img(src="../images/3.png", alt="arrow").product-card__image
-              .row.margin
-                .col-6
-                  h4.product-card__title.upper Tapered
-                  p.product-card__description Tapered fit
-                .col-6
-                  span €165,00
+              .overflow
+                img(src="../images/3.png", alt="arrow").product-card__image
+                .row.margin
+                  .col-6
+                    h4.product-card__title.upper Tapered
+                    p.product-card__description Tapered fit
+                  .col-6
+                    span €165,00
 
     section#press.press
       .container

@@ -50,15 +50,20 @@ function renderPopup() {
     });
 }
 
-const links = Array.from(cloneNodes.children);
+document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('menu__link')) return;
+    hamburgerHandler(e)
+})
 
-links.forEach((link) => {
-    link.addEventListener("click", closeOnClick);
-});
+// const links = Array.from(cloneNodes.children);
 
-function closeOnClick() {
-    links.remove();
-}
+// links.forEach((link) => {
+//     link.addEventListener("click", closeOnClick);
+// });
+
+// function closeOnClick() {
+//     links.remove();
+// }
 
 
 

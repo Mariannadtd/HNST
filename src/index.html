@@ -46,7 +46,7 @@ body {
   font-size: 13px;
   font-family: "Roboto", sans-serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   body {
     font-size: 11px;
   }
@@ -101,6 +101,12 @@ input[type=text]::-moz-placeholder {
   color: #FF0000;
 }
 
+.overflow {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header {
   padding: 0 2.5rem;
   align-items: center;
@@ -147,7 +153,7 @@ input[type=text]::-moz-placeholder {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   .menu {
     display: none;
   }
@@ -165,14 +171,14 @@ input[type=text]::-moz-placeholder {
     padding: 1rem 0;
     cursor: pointer;
   }
-  .hamburger__field.active.bar:nth-child(2) {
+  .hamburger__field.active .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger__field.active.bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  .hamburger__field.active .bar:nth-child(1) {
+    transform: translateY(9.2px) rotate(45deg);
   }
-  .hamburger__field.active.bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .hamburger__field.active .bar:nth-child(3) {
+    transform: translateY(-9.2px) rotate(-45deg);
   }
   .hamburger-menu {
     display: flex;
@@ -230,6 +236,11 @@ input[type=text]::-moz-placeholder {
 .offer-btn:nth-child(1) {
   margin-right: 3rem;
 }
+@media (max-width: 992px) {
+  .offer-btn {
+    margin-bottom: 7.3rem;
+  }
+}
 .offer-quote {
   font-size: 1.9rem;
 }
@@ -246,6 +257,11 @@ input[type=text]::-moz-placeholder {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 576px) {
+  .btn-group {
+    display: inline-block;
+  }
+}
 
 #why {
   background-color: #fff;
@@ -254,6 +270,11 @@ input[type=text]::-moz-placeholder {
 .yes, .no {
   border-right: 0.1rem solid #FF0000;
   padding-left: 3rem;
+}
+@media (max-width: 992px) {
+  .yes, .no {
+    margin-bottom: 7.3rem;
+  }
 }
 
 .why-title {
@@ -337,6 +358,16 @@ input[type=text]::-moz-placeholder {
 .product-featured__title {
   font-size: 3.3rem;
   margin-bottom: 41rem;
+}
+@media (max-width: 768px) {
+  .product-featured__title {
+    margin-bottom: 15rem;
+  }
+}
+@media (max-width: 768px) {
+  .product-featured__arrow {
+    transform: rotate(90deg);
+  }
 }
 .product-card {
   margin-left: 2.6rem;
@@ -486,37 +517,41 @@ input[type=text]::-moz-placeholder {
     <section id="offer">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col offer"><span class="offer-quote upper">beat the lockdown blues with</span>
+          <div class="col-lg-6 col offer"><span class="offer-quote upper">beat the lockdown blues with</span>
             <h1 class="offer-title">The world's most sustainable denim collection.</h1>
             <h3 class="offer-subtitle">Let's ditch fast fashion and change the world.</h3>
             <div class="btn-group"><a class="offer-btn upper">shop Women</a><a class="offer-btn upper">shop Men</a></div>
           </div>
-          <div class="col"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div>
+          <div class="col-lg-6 col g-0"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div>
         </div>
       </div>
     </section>
     <section id="why">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 yes">
-            <h2 class="why-title upper">Yes</h2>
-            <ul class="why-list">
-              <li class="why-list__item">+ 56% Recycled denim</li>
-              <li class="why-list__item">+ saves 76% CO2</li>
-              <li class="why-list__item">+ 100% recyclable</li>
-              <li class="why-list__item">+ saves 6639 liter water</li>
-              <li class="why-list__item">+ 100% Made in EU</li>
-            </ul>
-          </div>
-          <div class="col-lg-3 no">
-            <h2 class="why-title upper">No</h2>
-            <ul class="why-list">
-              <li class="why-list__item">- Toxic Chemicals</li>
-              <li class="why-list__item">- Plastic fibers or coating</li>
-              <li class="why-list__item">- Extra labels</li>
-              <li class="why-list__item">- Unethical labour</li>
-              <li class="why-list__item">- Compromises</li>
-            </ul>
+          <div class="col-lg-6 col">
+            <div class="row">
+              <div class="col-md-6 col yes">
+                <h2 class="why-title upper">Yes</h2>
+                <ul class="why-list">
+                  <li class="why-list__item">+ 56% Recycled denim</li>
+                  <li class="why-list__item">+ saves 76% CO2</li>
+                  <li class="why-list__item">+ 100% recyclable</li>
+                  <li class="why-list__item">+ saves 6639 liter water</li>
+                  <li class="why-list__item">+ 100% Made in EU</li>
+                </ul>
+              </div>
+              <div class="col-md-6 col no">
+                <h2 class="why-title upper">No</h2>
+                <ul class="why-list">
+                  <li class="why-list__item">- Toxic Chemicals</li>
+                  <li class="why-list__item">- Plastic fibers or coating</li>
+                  <li class="why-list__item">- Extra labels</li>
+                  <li class="why-list__item">- Unethical labour</li>
+                  <li class="why-list__item">- Compromises</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="col-lg-6 g-0"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
         </div>
@@ -545,8 +580,8 @@ input[type=text]::-moz-placeholder {
     <section class="mail" id="mail">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 g-0"><img class="mail-photo" src="../images/jeans.png" alt="offer"/></div>
-          <div class="col-md-6 g-0">
+          <div class="col-lg-6 col-md-12 g-0 overflow"><img class="mail-photo" src="../images/jeans.png" alt="mail"/></div>
+          <div class="col-lg-6 col-md-12 g-0">
             <form class="form">
               <h2 class="form__title">Newsletter</h2>
               <p class="form__paragraph">Honestly good e-mails. We swear. Receive offers, updates, tips and exclusive invites.</p>
@@ -564,41 +599,47 @@ input[type=text]::-moz-placeholder {
     <section class="product" id="product">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 g-0">
+          <div class="col-xl-3 col-md-6 g-0">
             <div class="product-featured hover">
               <h2 class="product-featured__title upper">Featured Products</h2><img class="product-featured__arrow" src="../images/arrow.png" alt="arrow"/>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border hover">
-            <div class="product-card"><img class="product-card__image" src="../images/1.png" alt="arrow"/>
-              <div class="row margin">
-                <div class="col-6">
-                  <h4 class="product-card__title upper">Straight</h4>
-                  <p class="product-card__description">Straight fit</p>
+          <div class="col-xl-3 col-md-6 g-0 margin border hover">
+            <div class="product-card">
+              <div class="overflow"><img class="product-card__image" src="../images/1.png" alt="arrow"/>
+                <div class="row margin">
+                  <div class="col-6">
+                    <h4 class="product-card__title upper">Straight</h4>
+                    <p class="product-card__description">Straight fit</p>
+                  </div>
+                  <div class="col-6"><span>€135,00</span></div>
                 </div>
-                <div class="col-6"><span>€135,00</span></div>
               </div>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border hover">
-            <div class="product-card"><img class="product-card__image" src="../images/2.png" alt="arrow"/>
-              <div class="row margin">
-                <div class="col-6">
-                  <h4 class="product-card__title upper">Straight</h4>
-                  <p class="product-card__description">Mom fit</p>
+          <div class="col-xl-3 col-md-6 g-0 margin border hover">
+            <div class="product-card">
+              <div class="overflow"><img class="product-card__image" src="../images/2.png" alt="arrow"/>
+                <div class="row margin">
+                  <div class="col-6">
+                    <h4 class="product-card__title upper">Straight</h4>
+                    <p class="product-card__description">Mom fit</p>
+                  </div>
+                  <div class="col-6"><span>€95,00</span></div>
                 </div>
-                <div class="col-6"><span>€95,00</span></div>
               </div>
             </div>
           </div>
-          <div class="col-md-3 g-0 margin border hover">
-            <div class="product-card"><img class="product-card__image" src="../images/3.png" alt="arrow"/>
-              <div class="row margin">
-                <div class="col-6">
-                  <h4 class="product-card__title upper">Tapered</h4>
-                  <p class="product-card__description">Tapered fit</p>
+          <div class="col-xl-3 col-md-6 g-0 margin border hover">
+            <div class="product-card">
+              <div class="overflow"><img class="product-card__image" src="../images/3.png" alt="arrow"/>
+                <div class="row margin">
+                  <div class="col-6">
+                    <h4 class="product-card__title upper">Tapered</h4>
+                    <p class="product-card__description">Tapered fit</p>
+                  </div>
+                  <div class="col-6"><span>€165,00</span></div>
                 </div>
-                <div class="col-6"><span>€165,00</span></div>
               </div>
             </div>
           </div>
