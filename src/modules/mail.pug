@@ -1,11 +1,15 @@
 form.form
   h2.form__title Newsletter
   p.form__paragraph Honestly good e-mails. We swear. Receive offers, updates, tips and exclusive invites.
-  .form-inner
-    input(type="text", placeholder="First name", name="firstName").form-inner__input.upper
-    input(type="text", placeholder="Last name", name="lastName").form-inner__input.upper
-    input(type="text", placeholder="Email", name="mail").form-inner__input.upper
-    button.form-inner__btn.upper subscribe
+  .form-container
+    .note
+    .fields
+      .form-inner
+        input(type="text", placeholder="First name", name="name").form-inner__input.upper
+        input(type="text", placeholder="Last name", name="last-name").form-inner__input.upper
+        input(type="email", placeholder="Email", name="email").form-inner__input.upper
+        //- button.form-inner__btn.upper subscribe
+        input(type="submit", name="submit", value="subscribe").form-container__btn.form-inner__btn.upper
   a.form__license Read our privacy policy
 //-   .row
 //-     .col-3
