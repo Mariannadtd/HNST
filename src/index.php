@@ -31,7 +31,7 @@ if(!$error)
 
 $name_tema = "=?utf-8?b?". base64_encode($name) ."?=";
 
-$subject ="Новая заявка с сайта domain.name";
+$subject ="New order from domain.name";
 $subject1 = "=?utf-8?b?". base64_encode($subject) ."?=";
 /*
 $message ="\n\nСообщение: ".$message."\n\nИмя: " .$name."\n\nТелефон: ".$tel."\n\n";
@@ -41,7 +41,7 @@ $message1 ="\n\nName: ".$name."\n\nE-mail: " .$email."\n\nLast-name: ".$last-nam
 
 $header = "Content-Type: text/plain; charset=utf-8\n";
 
-$header .= "From: Новая заявка <romanova.lenovo@gmail.com>\n\n";
+$header .= "From: New <romanova.lenovo@gmail.com>\n\n";
 $mail = mail("romanova.lenovo@gmail.com", $subject1, iconv ('utf-8', 'windows-1251', $message1), iconv ('utf-8', 'windows-1251', $header));
 
 if($mail)
@@ -55,5 +55,4 @@ else
 echo '<div class="notification_error">'.$error.'</div>';
 }
 
-}
 ?>
