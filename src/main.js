@@ -1,25 +1,19 @@
-// sticky NAVBAR / burger
-// const hamburger = document.querySelector("#hamburger");
-//     popup = document.querySelector("#popup");
-//     menu = document.querySelector("#menu").cloneNode(1);
-//     body = document.body;
+// sticky NAVBAR
+/* sticky header */
+window.onscroll = function showHeader() {
+    var header = document.querySelector('.header');
+    if(window.pageYOffset > 0){
+        header.classList.add('header_fixed');
+    } else{
+        header.classList.remove('header_fixed');
+    }
+}
 
-// hamburger.addEventListener("click", hamburgerHandler);
 
-// function hamburgerHandler(e) {
-//     e.preventDefault();
-//     popup.classList.toggle("open");
-//     hamburger.classList.toggle("active");
-//     body.classList.toggle("noscroll");
-//     renderPopup();
-// }
 
-// function renderPopup() {
-//     document.querySelectorAll("#menu").forEach((menu) => {
-//         popup.appendChild(menu);
-//         menu.classList.toggle('hamburger-menu');
-//     });
-// }
+
+
+// HAMBURGER
 const hamburger = document.querySelector("#hamburger");
     body = document.body;
     popup = document.querySelector("#popup");
@@ -54,16 +48,6 @@ document.addEventListener('click', (e) => {
     if (!e.target.classList.contains('menu__link')) return;
     hamburgerHandler(e)
 })
-
-// const links = Array.from(cloneNodes.children);
-
-// links.forEach((link) => {
-//     link.addEventListener("click", closeOnClick);
-// });
-
-// function closeOnClick() {
-//     links.remove();
-// }
 
 
 
@@ -129,3 +113,25 @@ const interval = setInterval(nextSlide, 2500);
 
 }
 
+// second version of navbar
+// const hamburger = document.querySelector("#hamburger");
+//     popup = document.querySelector("#popup");
+//     menu = document.querySelector("#menu").cloneNode(1);
+//     body = document.body;
+
+// hamburger.addEventListener("click", hamburgerHandler);
+
+// function hamburgerHandler(e) {
+//     e.preventDefault();
+//     popup.classList.toggle("open");
+//     hamburger.classList.toggle("active");
+//     body.classList.toggle("noscroll");
+//     renderPopup();
+// }
+
+// function renderPopup() {
+//     document.querySelectorAll("#menu").forEach((menu) => {
+//         popup.appendChild(menu);
+//         menu.classList.toggle('hamburger-menu');
+//     });
+// }
