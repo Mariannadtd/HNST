@@ -9,6 +9,24 @@ $large:          992px;
 $x-large:      1200px;
 $xx-large:     1400px;
 
+a:active,
+a:hover,
+a {
+  color: $main;
+  text-decoration: none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: $main;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    $main;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    $main;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    $main;
+}
 .upper {
   text-transform: uppercase;
 }
@@ -24,7 +42,6 @@ $xx-large:     1400px;
   cursor: pointer;
   }
 }
-
 html {
   font-size: 10px;
 }
@@ -41,10 +58,6 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-a {
-  text-decoration: none;
-  color: $main;
 }
 *,
 *::before,
@@ -261,6 +274,9 @@ input[type="text"]::-moz-placeholder {
     font-size: 2.1rem;
     font-weight: 300;
   }
+  &-inner {
+    height: 100%;
+  }
 }
 
 
@@ -314,7 +330,6 @@ input[type="text"]::-moz-placeholder {
   &__license {
     padding-top: 8.2rem;
     display: block;
-    color: $main;
   }
   &-inner {
     display: flex;
@@ -452,9 +467,14 @@ input[type="text"]::-moz-placeholder {
 .footer {
   &-menu {
   padding: 3rem;
+  @media (max-width: $large) {
+    border-top: 1px solid $main;
+    }
   }
   &-socials {
     margin-left: auto;
+    display: flex;
+      justify-content: space-between;
     &__photo {
       margin-left: 2.6rem;
       cursor: pointer;

@@ -1,4 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro&display=swap");
+a:active,
+a:hover,
+a {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #FF0000;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #FF0000;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #FF0000;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #FF0000;
+}
+
 .upper {
   text-transform: uppercase;
 }
@@ -36,11 +63,6 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #FF0000;
 }
 
 *,
@@ -265,6 +287,9 @@ input[type=text]::-moz-placeholder {
   font-size: 2.1rem;
   font-weight: 300;
 }
+.why-inner {
+  height: 100%;
+}
 
 .compromise {
   padding: 2.4rem 0 16.7rem;
@@ -305,7 +330,6 @@ input[type=text]::-moz-placeholder {
 .form__license {
   padding-top: 8.2rem;
   display: block;
-  color: #FF0000;
 }
 .form-inner {
   display: flex;
@@ -433,8 +457,15 @@ input[type=text]::-moz-placeholder {
 .footer-menu {
   padding: 3rem;
 }
+@media (max-width: 992px) {
+  .footer-menu {
+    border-top: 1px solid #FF0000;
+  }
+}
 .footer-socials {
   margin-left: auto;
+  display: flex;
+  justify-content: space-between;
 }
 .footer-socials__photo {
   margin-left: 2.6rem;
