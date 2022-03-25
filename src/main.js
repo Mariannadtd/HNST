@@ -1,4 +1,3 @@
-// sticky NAVBAR
 /* sticky header */
 window.onscroll = function showHeader() {
     var header = document.querySelector('.header');
@@ -7,6 +6,17 @@ window.onscroll = function showHeader() {
     } else{
         header.classList.remove('header_fixed');
     }
+}
+
+
+
+// add close button
+const addClose = document.querySelector("#add");
+
+addClose.addEventListener("click", addCloseHandler);
+
+function addCloseHandler() {
+    addClose.classList.add('none');
 }
 
 

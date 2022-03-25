@@ -110,12 +110,17 @@ input[type=text]::-moz-placeholder {
      object-fit: cover;
 }
 
+.none {
+  display: none;
+}
+
 .header {
   padding: 0 2.5rem;
   align-items: center;
   border-bottom: 0.1rem solid #FF0000;
   margin: 0 auto;
   font-family: "Source Sans Pro", sans-serif !important;
+  letter-spacing: 0.098rem;
 }
 
 .navbar-menu {
@@ -187,6 +192,7 @@ input[type=text]::-moz-placeholder {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    align-items: center;
   }
 
   .bar {
@@ -259,10 +265,36 @@ body {
     top: 0;
   }
 }
-.ad-notice {
+.add-notice {
+  font-family: "Source Sans Pro", sans-serif !important;
   font-size: 1.4rem;
+  text-align: center;
+  padding: 1.5rem 0 1.1rem;
+}
+
+.exit__button {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
   display: block;
-  color: #FF0000;
+  float: right;
+  padding-bottom: 2rem;
+  position: relative;
+  top: -2.5rem;
+}
+.exit__button_left {
+  width: 2rem;
+  height: 0.1rem;
+  transform: translateY(0.05rem) rotate(45deg);
+  display: block;
+  background-color: #FF0000;
+}
+.exit__button_right {
+  width: 2rem;
+  height: 0.1rem;
+  transform: translateY(-0.05rem) rotate(-45deg);
+  display: block;
+  background-color: #FF0000;
 }
 
 #offer {
@@ -279,7 +311,7 @@ body {
 .offer-btn {
   border: 0.1rem solid #FF0000;
   font-size: 1.5rem;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   width: 20rem;
   display: block;
 }
@@ -454,6 +486,11 @@ body {
   }
 }
 
+.note {
+  font-size: 2rem;
+  padding-bottom: 4rem;
+}
+
 .product-featured {
   padding: 4.6rem 0 3rem 3rem;
 }
@@ -573,10 +610,11 @@ body {
   float: right;
 }
 .footer-bottom {
-  margin-top: 9.7rem;
+  margin-top: 12.5rem;
 }
 .footer-list__item {
   line-height: 2.8rem;
+  letter-spacing: 0.081rem;
   cursor: pointer;
 }
 .footer-list__item:hover:after {
