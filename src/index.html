@@ -66,6 +66,9 @@ a {
 
 html {
   font-size: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -77,6 +80,9 @@ body {
 @media (max-width: 992px) {
   body {
     font-size: 11px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -118,10 +124,20 @@ input[type=text]::-moz-placeholder {
   font-weight: bold;
 }
 .hamburger-menu:nth-child(1) {
-  padding-top: 9rem;
+  padding-top: 7rem;
 }
 .hamburger-menu:hover {
   color: #FF0000;
+}
+.hamburger-menu .menu__item {
+  padding: 1rem 0 1rem 0;
+}
+.hamburger-menu .menu__item:hover:active {
+  content: "";
+  position: absolute;
+  border-bottom: 0.4rem solid #FF0000;
+  width: 4rem;
+  display: block;
 }
 
 .overflow {
@@ -324,7 +340,12 @@ body {
 }
 @media (max-width: 992px) {
   #offer {
-    padding: 15rem 0 0;
+    padding: 10rem 0 0;
+  }
+}
+@media (max-width: 576px) {
+  #offer {
+    padding: 7rem 0 0;
   }
 }
 
@@ -347,6 +368,11 @@ body {
     margin-bottom: 7.3rem;
   }
 }
+@media (max-width: 576px) {
+  .offer-btn {
+    margin-bottom: 3rem;
+  }
+}
 @media (max-width: 992px) {
   .offer-photo {
     width: 100%;
@@ -358,13 +384,29 @@ body {
 .offer-quote {
   font-size: 1.9rem;
 }
+@media (max-width: 576px) {
+  .offer-quote {
+    font-size: 1.4rem;
+  }
+}
 .offer-title {
   font-size: 6.5rem;
   margin: 2.5rem 0 2.9rem;
 }
+@media (max-width: 1200px) {
+  .offer-title {
+    font-size: 5rem;
+  }
+}
 .offer-subtitle {
   font-size: 2.1rem;
   margin-bottom: 7.3rem;
+}
+@media (max-width: 576px) {
+  .offer-subtitle {
+    font-size: 1.7rem;
+    margin-bottom: 4.3rem;
+  }
 }
 .offer-notice {
   font-size: 1.4rem;
@@ -423,6 +465,11 @@ body {
   font-weight: 300;
   padding-top: 2.4rem;
 }
+@media (max-width: 576px) {
+  .compromise-title {
+    font-size: 3.5rem;
+  }
+}
 
 .shop-button:hover {
   cursor: pointer;
@@ -437,6 +484,18 @@ body {
 .shop-button__title {
   font-size: 6.5rem;
   padding: 5.1rem 0 2.9rem 3rem;
+}
+@media (max-width: 576px) {
+  .shop-button__title {
+    font-size: 4.5rem;
+  }
+}
+.shop-button__photo {
+  max-width: 100%;
+}
+
+.image-wrapper {
+  width: 100%;
 }
 
 .form {
@@ -508,7 +567,6 @@ body {
 
 .note {
   font-size: 2rem;
-  padding-bottom: 4rem;
 }
 
 .product-featured {
@@ -523,6 +581,11 @@ body {
     margin-bottom: 15rem;
   }
 }
+@media (max-width: 576px) {
+  .product-featured__title {
+    font-size: 2.5rem;
+  }
+}
 @media (max-width: 768px) {
   .product-featured__arrow {
     transform: rotate(90deg);
@@ -530,6 +593,17 @@ body {
 }
 .product-card {
   margin-left: 2.6rem;
+}
+@media (max-width: 768px) {
+  .product-card__image {
+    height: 45rem;
+  }
+}
+.product-about {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.2rem;
+  max-width: 30.5rem;
 }
 
 .press-read {
@@ -544,6 +618,11 @@ body {
   color: #FF0000;
   letter-spacing: 0.13rem;
   background-color: #F5F2EA;
+}
+@media (max-width: 768px) {
+  .press-btn {
+    margin-top: 15rem;
+  }
 }
 .press-btn:hover {
   color: #fff;
@@ -561,6 +640,11 @@ body {
 .press-slide__title {
   font-size: 4.8rem;
 }
+@media (max-width: 768px) {
+  .press-slide__title {
+    font-size: 3.3rem;
+  }
+}
 
 .slider {
   display: flex;
@@ -570,6 +654,11 @@ body {
 }
 .slider-inner {
   height: 41.5rem;
+}
+@media (max-width: 768px) {
+  .slider-inner {
+    height: 35rem;
+  }
 }
 
 .slide {
@@ -621,16 +710,32 @@ body {
   margin-left: auto;
   display: flex;
   justify-content: space-between;
+  width: 11rem;
+}
+@media (max-width: 576px) {
+  .footer-socials {
+    padding-top: 2rem;
+  }
 }
 .footer-socials__photo {
-  margin-left: 2.6rem;
   cursor: pointer;
 }
 .footer__logo {
   float: right;
 }
+@media (max-width: 576px) {
+  .footer__logo {
+    height: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .footer__rights {
+    position: relative;
+    top: -1.5rem;
+  }
+}
 .footer-bottom {
-  margin-top: 12.5rem;
+  margin-top: 9.5rem;
 }
 .footer-list__item {
   line-height: 2.8rem;
@@ -646,6 +751,11 @@ body {
 }
 .footer-list__item_title {
   padding-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .footer-list:nth-child(2) {
+    padding-bottom: 3rem !important;
+  }
 }
 
 .padding-bottom {
@@ -695,7 +805,9 @@ body {
             <h3 class="offer-subtitle">Let's ditch fast fashion and change the world.</h3>
             <div class="btn-group"><a class="offer-btn upper">shop Women</a><a class="offer-btn upper">shop Men</a></div>
           </div>
-          <div class="col-lg-6 col-md-12 g-0"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div>
+          <div class="col-lg-6 col-md-12 g-0">
+            <div class="image-wrapper"><img class="offer-photo" src="../images/offer.png" alt="offer"/></div>
+          </div>
         </div>
       </div>
     </section>
@@ -726,7 +838,9 @@ body {
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 g-0"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
+          <div class="col-lg-6 col-md-12 g-0">
+            <div class="image-wrapper"><img class="why-photo" src="../images/secondsection.png" alt="offer"/></div>
+          </div>
         </div>
       </div>
     </section>
@@ -739,12 +853,14 @@ body {
     </section>
     <section class="shop" id="shop">
       <div class="container">
-        <div class="row"><a class="col-md-6 g-0 shop-button"><img class="shop-button__photo" src="../images/women.png" alt="women"/>
-            <row class="g-0 d-flex">
+        <div class="row"><a class="col-md-6 g-0 shop-button">
+            <div class="image-wrapper"><img class="shop-button__photo" src="../images/women.png" alt="women"/></div>
+            <row class="g-0 d-flex justify-content-between">
               <h2 class="col-sm-6 shop-button__title">Women</h2>
               <div class="col-sm-6"><img class="shop-button__arrow" src="../images/arrow.png" alt="arrow"/></div>
-            </row></a><a class="col-md-6 g-0 shop-button border"><img class="shop-button__photo" src="../images/men.png" alt="men"/>
-            <row class="g-0 d-flex">
+            </row></a><a class="col-md-6 g-0 shop-button border">
+            <div class="image-wrapper"><img class="shop-button__photo" src="../images/men.png" alt="men"/></div>
+            <row class="g-0 d-flex justify-content-between">
               <h2 class="col-sm-6 shop-button__title">Men</h2>
               <div class="col-sm-6"><img class="shop-button__arrow" src="../images/arrow.png" alt="arrow"/></div>
             </row></a></div>
@@ -777,20 +893,20 @@ body {
     <section class="product" id="product">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3 col-md-6 g-0">
-            <div class="product-featured hover">
+          <div class="col-xl-3 col-lg-6 col g-0">
+            <div class="product-featured">
               <h2 class="product-featured__title upper">Featured Products</h2><img class="product-featured__arrow" src="../images/arrow.png" alt="arrow"/>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 g-0 margin border hover">
+          <div class="col-xl-3 col-md-6 g-0 margin border hover overflow">
             <div class="product-card">
               <div class="overflow"><img class="product-card__image" src="../images/1.png" alt="arrow"/>
-                <div class="row margin">
-                  <div class="col-6">
+                <div class="product-about">
+                  <div class="product__descr block">
                     <h4 class="product-card__title upper">Straight</h4>
                     <p class="product-card__description">Straight fit</p>
                   </div>
-                  <div class="col-6"><span>€135,00</span></div>
+                  <div class="product__price block"><span>€135,00</span></div>
                 </div>
               </div>
             </div>
@@ -798,12 +914,12 @@ body {
           <div class="col-xl-3 col-md-6 g-0 margin border hover">
             <div class="product-card">
               <div class="overflow"><img class="product-card__image" src="../images/2.png" alt="arrow"/>
-                <div class="row margin">
-                  <div class="col-6">
+                <div class="product-about">
+                  <div class="product__descr block">
                     <h4 class="product-card__title upper">Straight</h4>
                     <p class="product-card__description">Mom fit</p>
                   </div>
-                  <div class="col-6"><span>€95,00</span></div>
+                  <div class="product__price block"><span>€95,00</span></div>
                 </div>
               </div>
             </div>
@@ -811,12 +927,12 @@ body {
           <div class="col-xl-3 col-md-6 g-0 margin border hover">
             <div class="product-card">
               <div class="overflow"><img class="product-card__image" src="../images/3.png" alt="arrow"/>
-                <div class="row margin">
-                  <div class="col-6">
+                <div class="product-about">
+                  <div class="product__descr block">
                     <h4 class="product-card__title upper">Tapered</h4>
                     <p class="product-card__description">Tapered fit</p>
                   </div>
-                  <div class="col-6"><span>€165,00</span></div>
+                  <div class="product__price block"><span>€165,00</span></div>
                 </div>
               </div>
             </div>
@@ -890,7 +1006,7 @@ body {
                     <li class="footer-list__item"><a>Contact</a></li>
                   </ul>
                 </div>
-                <div class="col-sm-3 col-6">
+                <div class="col-sm-3 col-12">
                   <ul class="footer-list">
                     <li class="footer-list__item_title upper">Legal</li>
                     <li class="footer-list__item"><a>Terms of Service</a></li>
@@ -900,14 +1016,14 @@ body {
                     <li class="footer-list__item"><a>Refund and Returns Policy</a></li>
                   </ul>
                 </div>
-                <div class="col-sm-3 col-6">
+                <div class="col-sm-3 col-12">
                   <div class="footer-socials"><a><img class="footer-socials__photo" src="../images/instasymbol.png" alt="offer"/></a><a><img class="footer-socials__photo" src="../images/facebooksymbol.png" alt="offer"/></a><a><img class="footer-socials__photo" src="../images/twittersymbol.png" alt="offer"/></a></div>
                 </div>
               </div>
               <div class="footer-bottom">
                 <div class="row">
-                  <div class="col-md-6 align-self-end"><span class="footer__rights">© Circular Textiles 2021</span></div>
-                  <div class="col-md-6"><img class="footer__logo" src="../images/logo.png" alt="logo"/></div>
+                  <div class="col align-self-end"><span class="footer__rights">© Circular Textiles 2021</span></div>
+                  <div class="col"><img class="footer__logo" src="../images/logo.png" alt="logo"/></div>
                 </div>
               </div>
             </div>

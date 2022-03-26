@@ -30,7 +30,8 @@ html(lang="ru")
               a.offer-btn.upper shop Women
               a.offer-btn.upper shop Men
           .col-lg-6.col-md-12.g-0
-            img(src="../images/offer.png", alt="offer").offer-photo
+            .image-wrapper
+              img(src="../images/offer.png", alt="offer").offer-photo
 
     section#why
       .container
@@ -54,7 +55,8 @@ html(lang="ru")
                   li.why-list__item - Unethical labour
                   li.why-list__item - Compromises
           .col-lg-6.col-md-12.g-0
-            img(src="../images/secondsection.png", alt="offer").why-photo
+            .image-wrapper
+              img(src="../images/secondsection.png", alt="offer").why-photo
 
     section#compromise.compromise
       .container
@@ -66,14 +68,16 @@ html(lang="ru")
       .container
         .row
           a.col-md-6.g-0.shop-button
-            img(src="../images/women.png", alt="women").shop-button__photo
-            row.g-0.d-flex
+            .image-wrapper
+              img(src="../images/women.png", alt="women").shop-button__photo
+            row.g-0.d-flex.justify-content-between
               h2.col-sm-6.shop-button__title Women
               .col-sm-6
                 img(src="../images/arrow.png", alt="arrow").shop-button__arrow
           a.col-md-6.g-0.shop-button.border
-            img(src="../images/men.png", alt="men").shop-button__photo
-            row.g-0.d-flex
+            .image-wrapper
+              img(src="../images/men.png", alt="men").shop-button__photo
+            row.g-0.d-flex.justify-content-between
               h2.col-sm-6.shop-button__title Men
               .col-sm-6
                 img(src="../images/arrow.png", alt="arrow").shop-button__arrow
@@ -89,39 +93,39 @@ html(lang="ru")
     section#product.product
       .container
         .row
-          .col-xl-3.col-md-6.g-0
-            .product-featured.hover
+          .col-xl-3.col-lg-6.col.g-0
+            .product-featured
               h2.product-featured__title.upper Featured Products
               img(src="../images/arrow.png", alt="arrow").product-featured__arrow
-          .col-xl-3.col-md-6.g-0.margin.border.hover
+          .col-xl-3.col-md-6.g-0.margin.border.hover.overflow
             .product-card
               .overflow
                 img(src="../images/1.png", alt="arrow").product-card__image
-                .row.margin
-                  .col-6
+                .product-about
+                  .product__descr.block
                     h4.product-card__title.upper Straight
                     p.product-card__description Straight fit
-                  .col-6
+                  .product__price.block
                     span €135,00
           .col-xl-3.col-md-6.g-0.margin.border.hover
             .product-card
               .overflow
                 img(src="../images/2.png", alt="arrow").product-card__image.
-                .row.margin
-                  .col-6
+                .product-about
+                  .product__descr.block
                     h4.product-card__title.upper Straight
                     p.product-card__description Mom fit
-                  .col-6
+                  .product__price.block
                     span €95,00
           .col-xl-3.col-md-6.g-0.margin.border.hover
             .product-card
               .overflow
                 img(src="../images/3.png", alt="arrow").product-card__image
-                .row.margin
-                  .col-6
+                .product-about
+                  .product__descr.block
                     h4.product-card__title.upper Tapered
                     p.product-card__description Tapered fit
-                  .col-6
+                  .product__price.block
                     span €165,00
 
     section#press.press
