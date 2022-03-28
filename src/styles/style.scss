@@ -111,12 +111,13 @@ section {
   }
   & .menu__item {
     padding: 1rem 0 1rem 0;
-    &:hover:active {
+    position: relative;
+    &:hover:after {
       content: '';
       position: absolute;
       border-bottom: .4rem solid $main;
-      width: 4rem;
-      display: block;
+      width: 100%;
+      top: 3.5rem;
     }
   }
 }
@@ -177,7 +178,7 @@ section {
     display: none;
   }
   .navbar {
-    &__wrap {
+    &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -306,7 +307,7 @@ body {
   }
 }
 .offer {
-  &-btn {
+  &__btn {
     border: .1rem solid $main;
     font-size: 1.5rem;
     padding: 2.5rem 0;
@@ -328,20 +329,20 @@ body {
       font-size: 1rem;
     }
   }
-  &-photo {
+  &__photo {
     @media (max-width: $large) {
       width: 100%;
       height: 50rem;
       object-fit: cover;
     }
   }
-  &-quote {
+  &__quote {
     font-size: 1.9rem;
     @media (max-width: $small) {
       font-size: 1.4rem;
     }
   }
-  &-title {
+  &__title {
     font-size: 6.5rem;
     margin: 2.5rem 0 2.9rem;
     @media (max-width: $x-large) {
@@ -351,17 +352,13 @@ body {
       font-size: 3.8rem;
     }
   }
-  &-subtitle {
+  &__subtitle {
     font-size: 2.1rem;
     margin-bottom: 7.3rem;
     @media (max-width: $small) {
       font-size: 1.7rem;
       margin-bottom: 4.3rem;
     }
-  }
-  &-notice {
-    font-size: 1.4rem;
-    margin: 0 auto;
   }
 }
 .btn-group {
@@ -397,7 +394,7 @@ body {
   &-inner {
     height: 100%;
   }
-  &-photo {
+  &__photo {
     @media (max-width: $large) {
       width: 100%;
       height: 50rem;
@@ -412,7 +409,7 @@ body {
 .compromise{
   padding-top: 2.4rem;
   padding-bottom: 16.7rem;
-  &-title {
+  &__title {
     font-size: 4.6rem;
     font-weight: 300;
     padding-top: 2.4rem;
@@ -514,7 +511,7 @@ body {
     }
   }
 }
-.mail-photo {
+.mail__photo {
   @media (max-width: $large) {
     width: 100%;
     height: 40rem;
@@ -575,7 +572,7 @@ body {
   &-read {
     margin: 3rem 0 3rem 3rem;
   }
-  &-btn {
+  &__btn {
     border: .1rem solid $main;
     margin-top: 32.8rem;
     @media (max-width: $medium) {
@@ -595,20 +592,6 @@ body {
   &__title {
     font-size: 4.8rem;
   }
-  &-slide {
-    &__subtitle {
-      font-size: 2.2rem;
-      max-width: 65rem;
-      margin-top: 4.4rem;
-      display: block;
-    }
-    &__title {
-      font-size: 4.8rem;
-      @media (max-width: $medium) {
-        font-size: 3.3rem;
-      }
-    }
-  }
 }
 .slider {
   display: flex;
@@ -623,8 +606,21 @@ body {
   }
 }
 .slide {
-  display: none;
+display: none;
+  &__subtitle {
+    font-size: 2.2rem;
+    max-width: 65rem;
+    margin-top: 4.4rem;
+    display: block;
+  }
+  &__title {
+    font-size: 4.8rem;
+    @media (max-width: $medium) {
+      font-size: 3.3rem;
+    }
+  }
 }
+
 .slide.active {
   display: block;
 }
